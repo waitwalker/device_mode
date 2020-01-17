@@ -1,0 +1,22 @@
+PODS:
+  - device_mode (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+
+DEPENDENCIES:
+  - device_mode (from `.symlinks/plugins/device_mode/ios`)
+  - Flutter (from `Flutter`)
+
+EXTERNAL SOURCES:
+  device_mode:
+    :path: ".symlinks/plugins/device_mode/ios"
+  Flutter:
+    :path: Flutter
+
+SPEC CHECKSUMS:
+  device_mode: d5ec31783d396eb2a00469cb48504af46b476b15
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+
+PODFILE CHECKSUM: 083258d7f5e80b42ea9bfee905fe93049bc04c64
+
+COCOAPODS: 1.8.4

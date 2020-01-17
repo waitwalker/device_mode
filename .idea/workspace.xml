@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c68531a-c233-4c6f-9324-b5cbd8789442" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/device_mode.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/device_mode.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.pub/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -13,17 +15,27 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="210ad255" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/device_mode.dart">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/example/lib/main.dart">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-68" />
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -31,11 +43,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/lib/device_mode.dart" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1260" />
-    <option name="y" value="-1301" />
-    <option name="width" value="1625" />
-    <option name="height" value="1000" />
+    <option name="x" value="-1738" />
+    <option name="y" value="-1331" />
+    <option name="width" value="1854" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -44,7 +63,38 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="device_mode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="device_mode" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="device_mode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="device_mode" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="device_mode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="device_mode" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="device_mode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="device_mode" type="462c0819:PsiDirectoryNode" />
+              <item name="ios" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="device_mode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="device_mode" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
@@ -52,6 +102,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
@@ -82,7 +133,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1388" y="-1211" width="1625" height="1000" extended-state="0" />
+    <frame x="-1631" y="-1400" width="1854" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Structure" side_tool="true" />
       <window_info id="Favorites" side_tool="true" />
@@ -92,12 +144,12 @@
       <window_info id="Captures" side_tool="true" />
       <window_info id="Resources Explorer" />
       <window_info id="Capture Tool" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24952622" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21799117" />
       <window_info anchor="bottom" id="Dart Analysis" />
       <window_info anchor="bottom" id="Run" />
       <window_info anchor="bottom" id="Logcat" />
       <window_info anchor="bottom" id="TODO" />
-      <window_info anchor="bottom" id="Debug" />
+      <window_info anchor="bottom" id="Debug" visible="true" weight="0.3121019" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" />
@@ -117,11 +169,17 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/device_mode.dart">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/example/lib/main.dart">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-68" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/device_mode.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
