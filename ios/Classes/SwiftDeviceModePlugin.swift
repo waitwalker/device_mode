@@ -10,6 +10,7 @@ public class SwiftDeviceModePlugin: NSObject, FlutterPlugin {
 
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
     if call.method == "deviceInfo" {
+        let modeName:String = UIDevice.current.modelName
         result("")
     } else {
         result(FlutterMethodNotImplemented)
@@ -17,7 +18,7 @@ public class SwiftDeviceModePlugin: NSObject, FlutterPlugin {
   }
 }
 
-//MARK: - UIDevice延展
+//MARK: - UIDevice extension
 public extension UIDevice {
     var modelName: String {
         var systemInfo = utsname()
