@@ -11,7 +11,15 @@ public class SwiftDeviceModePlugin: NSObject, FlutterPlugin {
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
     if call.method == "deviceInfo" {
         let modeName:String = UIDevice.current.modelName
-        result("")
+        let isPhone:Bool = UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone ? true : false
+        let isPad:Bool = UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad ? true : false
+        let deviceInfo:[String:Any] = [
+            "modeName":modeName,
+            "isPhone":isPhone,
+            "isPad":isPad
+        ]
+        
+        result(deviceInfo)
     } else {
         result(FlutterMethodNotImplemented)
     }
