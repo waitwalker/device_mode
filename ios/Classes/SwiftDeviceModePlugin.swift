@@ -9,6 +9,8 @@ public class SwiftDeviceModePlugin: NSObject, FlutterPlugin {
   }
 
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
+    print("method:\(call.method)")
+    
     if call.method == "deviceInfo" {
         let modeName:String = UIDevice.current.modelName
         let isPhone:Bool = UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone ? true : false
@@ -19,11 +21,18 @@ public class SwiftDeviceModePlugin: NSObject, FlutterPlugin {
             "isPad":isPad
         ]
         
-        result(deviceInfo)
+        let str:String = dicValueString(deviceInfo) ?? ""
+        result(str)
     } else {
         result(FlutterMethodNotImplemented)
     }
   }
+    
+    func dicValueString(_ dic:[String : Any]) -> String?{
+        let data = try? JSONSerialization.data(withJSONObject: dic, options: [])
+        let str = String(data: data!, encoding: String.Encoding.utf8)
+        return str
+    }
 }
 
 //MARK: - UIDevice extension

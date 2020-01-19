@@ -14,8 +14,8 @@ class DeviceMode {
   /// @author waitwalker
   /// @date 2020-01-17
   ///
-  static Future<Map<String,dynamic>> get deviceModeInfo async{
-    final Map modeInfo = await _channel.invokeMethod("deviceInfo");
+  static Future<String> get deviceModeInfo async{
+    final String modeInfo = await _channel.invokeMethod("deviceInfo");
     return modeInfo;
   }
 
