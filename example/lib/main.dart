@@ -28,6 +28,7 @@ class _MyAppState extends State<MyApp> {
     try {
       platformVersion = await DeviceMode.platformVersion;
       deviceInfo = await DeviceMode.deviceModeInfo;
+
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';
     }
