@@ -1,5 +1,6 @@
 package cn.waitwalker.device_mode
-
+import android.content.Context
+import android.content.res.Configuration
 import androidx.annotation.NonNull;
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.plugin.common.MethodCall
@@ -7,11 +8,12 @@ import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
 import io.flutter.plugin.common.PluginRegistry.Registrar
+import java.util.*
 
 /** DeviceModePlugin */
 public class DeviceModePlugin: FlutterPlugin, MethodCallHandler {
   override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
-    val channel = MethodChannel(flutterPluginBinding.getFlutterEngine().getDartExecutor(), "device_mode")
+    val channel = MethodChannel(flutterPluginBinding.getFlutterEngine().getDartExecutor(), "cn.waitwalker/device_mode")
     channel.setMethodCallHandler(DeviceModePlugin());
   }
 
@@ -27,19 +29,35 @@ public class DeviceModePlugin: FlutterPlugin, MethodCallHandler {
   companion object {
     @JvmStatic
     fun registerWith(registrar: Registrar) {
-      val channel = MethodChannel(registrar.messenger(), "device_mode")
+      val channel = MethodChannel(registrar.messenger(), "cn.waitwalker/device_mode")
       channel.setMethodCallHandler(DeviceModePlugin())
     }
   }
 
   override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
-    if (call.method == "getPlatformVersion") {
-      result.success("Android ${android.os.Build.VERSION.RELEASE}")
+    if (call.method == "deviceInfo") {
+      val value = isTablet(context = this);
+      val map = TreeMap<String,Any>()
+      map["isPhone"] = value;
+      map["isPad"] = value;
+      map["modeName"] = android.os.Build.BRAND;
+      result.success(map)
     } else {
       result.notImplemented()
     }
   }
 
+  /**
+   * judge device mode comes from Google I/O App for Android
+   * @param context
+   * @return tablet True，phone False
+   */
+  fun isTablet(context: Context): Boolean {
+    return context.resources.configuration.screenLayout and Configuration.SCREENLAYOUT_SIZE_MASK >= Configuration.SCREENLAYOUT_SIZE_LARGE
+  }
+
   override fun onDetachedFromEngine(@NonNull binding: FlutterPlugin.FlutterPluginBinding) {
   }
 }
+
+

@@ -22,10 +22,12 @@ class _MyAppState extends State<MyApp> {
 
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initPlatformState() async {
+    var deviceInfo;
     String platformVersion;
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
       platformVersion = await DeviceMode.platformVersion;
+      deviceInfo = await DeviceMode.deviceModeInfo;
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';
     }

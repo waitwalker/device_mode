@@ -3,7 +3,7 @@ import UIKit
 
 public class SwiftDeviceModePlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
-    let channel = FlutterMethodChannel(name: "device_mode", binaryMessenger: registrar.messenger())
+    let channel = FlutterMethodChannel(name: "cn.waitwalker/device_mode", binaryMessenger: registrar.messenger())
     let instance = SwiftDeviceModePlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
   }
